@@ -20,7 +20,7 @@ function App() {
         Hooks Study
       </h1>
       {/* <UseState /> */}
-      {/* <UseReducer /> */}
+      <UseReducer />
       {/* <UseEffect /> */}
       {/* <UseRef /> */}
       {/* <UseLayoutEffect /> */}
@@ -28,9 +28,9 @@ function App() {
       {/* <UseContext /> */}
       {/* <AdvanceUseEffect /> */}
       {/* <AdvanceUseState /> */}
-      <ThemeProvider>
+      {/* <ThemeProvider>
         <FunctionContext />
-      </ThemeProvider>
+      </ThemeProvider> */}
     </div>
   );
 }

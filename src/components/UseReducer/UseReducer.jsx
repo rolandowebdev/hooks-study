@@ -1,17 +1,18 @@
 import React, { useReducer } from 'react';
 
-// TODO: initial state for reducer
-const initialState = { count: 0, showText: false };
+// TODO: step 3 create constant variable for action
+const ACTIONS = {
+  INCREMENT: 'increment',
+  DECREMENT: 'decrement',
+};
 
-/**
- * TODO: Function for switch reducer state condition.
- */
+// TODO: step 2 create reducer function for action state
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'increment':
-      return { count: state.count + 1, showText: !state.showText };
-    case 'toogleShowText':
-      return { count: state.count, showText: state.showText };
+    case ACTIONS.INCREMENT:
+      return { count: state.count + 1 };
+    case ACTIONS.DECREMENT:
+      return { count: state.count - 1 };
     default:
       return state;
   }
@@ -19,13 +20,14 @@ const reducer = (state, action) => {
 
 export default function UseReducer() {
   /**
-   * TODO: useReducer explain : in use for set 2 state in 1 state.
-   * TODO: reducer : in use for switch condition state in reducer.
+   * * useReducer explain : useReducer can use for set 2 state in 1 state.
+   * * useReducer in use for switch condition state in reducer.
    */
-  const [state, dispatch] = useReducer(reducer, initialState);
+  // TODO: step 1 setup useReducer function
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
 
   return (
-    <section className='my-12 text-center'>
+    <section className='my-5 text-center'>
       <h2 className='text-xl tracking-wide underline uppercase bg-rose-600'>
         useReducer
       </h2>
@@ -37,10 +39,16 @@ export default function UseReducer() {
         <button
           className='w-full p-4 text-2xl font-semibold transition-colors duration-200 bg-indigo-600 rounded-sm hover:bg-indigo-800'
           onClick={() => {
-            dispatch({ type: 'increment' });
-            dispatch({ type: 'toogleShowText' });
+            dispatch({ type: ACTIONS.INCREMENT });
           }}>
-          InDec
+          +
+        </button>
+        <button
+          className='w-full p-4 mt-3 text-2xl font-semibold transition-colors duration-200 bg-indigo-600 rounded-sm hover:bg-indigo-800'
+          onClick={() => {
+            dispatch({ type: ACTIONS.DECREMENT });
+          }}>
+          -
         </button>
       </div>
     </section>
