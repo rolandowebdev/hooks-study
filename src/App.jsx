@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import {
   AdvanceUseEffect,
+  AdvanceUseReducer,
   AdvanceUseState,
   FunctionContext,
   ThemeProvider,
@@ -20,12 +21,13 @@ function App() {
         Hooks Study
       </h1>
       {/* <UseState /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
       {/* <UseEffect /> */}
       {/* <UseRef /> */}
       {/* <UseLayoutEffect /> */}
       {/* <UseImperativeHandle /> */}
       {/* <UseContext /> */}
+      <AdvanceUseReducer />
       {/* <AdvanceUseEffect /> */}
       {/* <AdvanceUseState /> */}
       {/* <ThemeProvider>
