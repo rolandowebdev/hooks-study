@@ -9,6 +9,7 @@ import {
   UseEffect,
   UseImperativeHandle,
   UseLayoutEffect,
+  UseMemo,
   UseReducer,
   UseRef,
   UseState,
@@ -24,10 +25,11 @@ function App() {
       {/* <UseReducer /> */}
       {/* <UseEffect /> */}
       {/* <UseRef /> */}
+      {/* <UseMemo /> */}
       {/* <UseLayoutEffect /> */}
       {/* <UseImperativeHandle /> */}
       {/* <UseContext /> */}
-      <AdvanceUseReducer />
+      {/* <AdvanceUseReducer /> */}
       {/* <AdvanceUseEffect /> */}
       {/* <AdvanceUseState /> */}
       {/* <ThemeProvider>

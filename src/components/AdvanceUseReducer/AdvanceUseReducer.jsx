@@ -9,6 +9,7 @@ export const ACTIONS = {
   DELETE_TODO: 'delete-todo',
 };
 
+// TODO: step 2 create reducer function for action state
 const reducer = (todos, action) => {
   switch (action.type) {
     case ACTIONS.ADD_TODO:
@@ -27,12 +28,9 @@ const reducer = (todos, action) => {
   }
 };
 
-// TODO: Function for add new todo
 const newTodo = (name) => {
   return { id: Date.now(), name: name, complete: false };
 };
-
-// TODO: step 2 create reducer function for action state+
 
 const AdvanceUseReducer = () => {
   // TODO: step 1 setup useReducer function
