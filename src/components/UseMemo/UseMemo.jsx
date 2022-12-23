@@ -4,7 +4,10 @@ const UseMemo = () => {
   const [number, setNumber] = useState(0);
   const [dark, setDark] = useState(false);
 
-  // * NOTE: useMemo can optimize computation for improve perfomance
+  /**
+   * * NOTE: useMemo can optimize computation for improve perfomance
+   * * NOTE: useMemo return the value
+   */
   const doubleNumber = useMemo(() => {
     return slowFunction(number);
   }, [number]);

@@ -5,6 +5,7 @@ import {
   AdvanceUseState,
   FunctionContext,
   ThemeProvider,
+  UseCallback,
   UseContext,
   UseEffect,
   UseImperativeHandle,
@@ -26,6 +27,7 @@ function App() {
       {/* <UseEffect /> */}
       {/* <UseRef /> */}
       {/* <UseMemo /> */}
+      <UseCallback />
       {/* <UseLayoutEffect /> */}
       {/* <UseImperativeHandle /> */}
       {/* <UseContext /> */}
