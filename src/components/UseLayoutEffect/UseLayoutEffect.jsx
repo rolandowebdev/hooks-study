@@ -1,33 +1,40 @@
-import React, { useLayoutEffect, useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
-export default function UseLayoutEffect() {
-  const inputRef = useRef(null);
+const UseLayoutEffect = () => {
+  const [show, setShow] = useState(false);
+  const popup = useRef();
+  const button = useRef();
 
   /**
-   * NOTE: useLayoutEffect call before useEffect
+   * NOTE:
+   * * - if you want to update dom in react you can use useLayoutEffect and useRef
+   * * - useLayoutEffect run syncronously after the DOM has been updated
+   * TODO: useLayoutEffect : use for trigger an effect after a component has rendered.
+   * TODO: useRef : use for manipulation DOM in react
    */
 
-  useEffect(() => {
-    inputRef.current.value = 'ReactJS!';
-    console.log('ReactJS');
-  }, []);
-
   useLayoutEffect(() => {
-    console.log(inputRef.current.value);
-  }, []);
+    if (popup.current == null || button.current == null) return;
+    const { bottom } = button.current.getBoundingClientRect();
+    console.log(button.current.getBoundingClientRect());
+    popup.current.style.top = `${bottom + 24}px`;
+  }, [show]);
 
   return (
-    <section className='my-12 text-center'>
-      <h2 className='text-xl tracking-wide underline uppercase bg-rose-600'>
-        UseLayoutEffect
-      </h2>
-      <div className='mt-3'>
-        <input
-          className='w-full p-2 mb-4 text-white bg-indigo-600 rounded placeholder:text-white focus:outline-none focus:ring focus:ring-indigo-400 focus:ring-offset-0'
-          defaultValue='NextJS'
-          ref={inputRef}
-        />
-      </div>
-    </section>
+    <>
+      <button
+        ref={button}
+        className='mt-4 btn'
+        onClick={() => setShow((prevState) => !prevState)}>
+        Click
+      </button>
+      {show && (
+        <div ref={popup} className='absolute'>
+          This is popup!
+        </div>
+      )}
+    </>
   );
-}
+};
+
+export default UseLayoutEffect;

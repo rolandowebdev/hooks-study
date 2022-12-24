@@ -23,14 +23,14 @@ function App() {
       <h1 className='text-4xl font-bold tracking-wide text-center uppercase'>
         Hooks Study
       </h1>
-      <CustomHooks />
+      {/* <CustomHooks /> */}
       {/* <UseState /> */}
       {/* <UseReducer /> */}
       {/* <UseEffect /> */}
       {/* <UseRef /> */}
       {/* <UseMemo /> */}
       {/* <UseCallback /> */}
-      {/* <UseLayoutEffect /> */}
+      <UseLayoutEffect />
       {/* <UseImperativeHandle /> */}
       {/* <UseContext /> */}
       {/* <AdvanceUseReducer /> */}
