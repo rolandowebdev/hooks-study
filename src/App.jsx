@@ -3,6 +3,7 @@ import {
   AdvanceUseEffect,
   AdvanceUseReducer,
   AdvanceUseState,
+  CustomHooks,
   FunctionContext,
   ThemeProvider,
   UseCallback,
@@ -22,12 +23,13 @@ function App() {
       <h1 className='text-4xl font-bold tracking-wide text-center uppercase'>
         Hooks Study
       </h1>
+      <CustomHooks />
       {/* <UseState /> */}
       {/* <UseReducer /> */}
       {/* <UseEffect /> */}
       {/* <UseRef /> */}
       {/* <UseMemo /> */}
-      <UseCallback />
+      {/* <UseCallback /> */}
       {/* <UseLayoutEffect /> */}
       {/* <UseImperativeHandle /> */}
       {/* <UseContext /> */}

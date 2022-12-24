@@ -13,3 +13,4 @@ export { default as ThemeProvider } from './AdvanceUseContext/ThemeProvider';
 export { default as AdvanceUseReducer } from './AdvanceUseReducer/AdvanceUseReducer';
 export { default as Todo } from './AdvanceUseReducer/Todo';
 export { default as UseCallback } from './UseCallback/UseCallback';
+export { default as CustomHooks } from './CustomHooks/CustomHooks';
