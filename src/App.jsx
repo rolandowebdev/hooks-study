@@ -15,6 +15,7 @@ import {
   UseReducer,
   UseRef,
   UseState,
+  UseTransition,
 } from './components';
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
       {/* <UseMemo /> */}
       {/* <UseCallback /> */}
       {/* <UseLayoutEffect /> */}
-      <UseImperativeHandle />
+      {/* <UseImperativeHandle /> */}
+      <UseTransition />
       {/* <UseContext /> */}
       {/* <AdvanceUseState /> */}
       {/* <AdvanceUseEffect /> */}
