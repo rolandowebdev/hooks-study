@@ -8,6 +8,7 @@ import {
   ThemeProvider,
   UseCallback,
   UseContext,
+  UseDefferedValue,
   UseEffect,
   UseImperativeHandle,
   UseLayoutEffect,
@@ -33,7 +34,8 @@ function App() {
       {/* <UseCallback /> */}
       {/* <UseLayoutEffect /> */}
       {/* <UseImperativeHandle /> */}
-      <UseTransition />
+      {/* <UseTransition /> */}
+      <UseDefferedValue />
       {/* <UseContext /> */}
       {/* <AdvanceUseState /> */}
       {/* <AdvanceUseEffect /> */}
