@@ -17,7 +17,7 @@ const Button = forwardRef((props, ref) => {
 
   return (
     <>
-      <button className='w-full p-4 text-2xl font-semibold transition-colors duration-200 bg-indigo-600 rounded-sm hover:bg-indigo-800'>
+      <button className='bg-indigo-700 btn hover:bg-indigo-800'>
         Button from Child
       </button>
       <p>{toggle && <span>Toggle</span>}</p>

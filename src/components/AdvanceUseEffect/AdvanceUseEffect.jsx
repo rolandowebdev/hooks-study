@@ -4,12 +4,13 @@ const AdvanceUseEffect = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleResize = () => {
-    setWindowWidth(window.innerWidth);
+    setWindowWidth(window.innerHeight);
   };
 
   useEffect(() => {
+    // initialize & update
     window.addEventListener('resize', handleResize);
-
+    // cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
     };

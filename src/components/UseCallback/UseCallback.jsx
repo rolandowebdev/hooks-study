@@ -24,20 +24,28 @@ const UseCallback = () => {
     [number] // getItems only change when number change
   );
 
-  const themeStyle = {
+  const containerStyle = {
     backgroundColor: dark ? 'bg-indigo-600' : 'bg-white',
     color: dark ? 'text-white' : 'text-indigo-600',
   };
+
+  const elementStyle = {
+    backgroundColor: dark ? 'bg-white' : 'bg-indigo-600',
+    color: dark ? 'text-indigo-600' : 'text-white',
+  };
+
   return (
     <div
-      className={`${themeStyle.backgroundColor} ${themeStyle.color} p-4 rounded-md`}>
+      className={`${containerStyle.backgroundColor} ${containerStyle.color} p-4 rounded-md`}>
       <input
         type='number'
         value={number}
         onChange={(e) => setNumber(parseInt(e.target.value))}
-        className='w-full p-2 mt-4 mb-4 text-white bg-indigo-700 rounded placeholder:text-white focus:outline-none focus:ring focus:ring-indigo-400 focus:ring-offset-0'
+        className={`${elementStyle.backgroundColor} ${elementStyle.color} duration-200 w-full p-2 mt-4 mb-4 focus:outline-none focus:ring focus:ring-indigo-400 rounded-sm focus:ring-offset-0`}
       />
-      <button className='btn' onClick={() => setDark((prevDark) => !prevDark)}>
+      <button
+        className={`btn ${elementStyle.backgroundColor} ${elementStyle.color}`}
+        onClick={() => setDark((prevDark) => !prevDark)}>
         Change Theme
       </button>
       <List getItems={getItems} />

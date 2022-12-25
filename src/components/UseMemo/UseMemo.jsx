@@ -32,7 +32,9 @@ const UseMemo = () => {
         onChange={(e) => setNumber(parseInt(e.target.value))}
         className='w-full p-2 mt-4 mb-4 text-white bg-indigo-600 rounded placeholder:text-white focus:outline-none focus:ring focus:ring-indigo-400 focus:ring-offset-0'
       />
-      <button className='btn' onClick={() => setDark((prevDark) => !prevDark)}>
+      <button
+        className='bg-indigo-700 btn hover:bg-indigo-800'
+        onClick={() => setDark((prevDark) => !prevDark)}>
         Change Theme
       </button>
       <p className={`${themeStyle.backgroundColor} ${themeStyle.color}`}>

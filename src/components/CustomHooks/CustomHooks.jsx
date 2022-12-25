@@ -3,7 +3,7 @@ import useUpdateLogger from './useUpdateLogger';
 
 const CustomHooks = () => {
   // * custom hooks for save data into localStorage
-  const [name, setName] = useLocalStorage('name', '');
+  const [name, setName] = useLocalStorage('name', () => 100);
 
   // * custom hooks log update data
   useUpdateLogger(name);

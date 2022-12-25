@@ -10,7 +10,7 @@ export default function UseImperativeHandle() {
       </h2>
       <div className='mt-3'>
         <button
-          className='w-full p-4 mb-4 text-2xl font-semibold transition-colors duration-200 bg-indigo-600 rounded-sm hover:bg-indigo-800'
+          className='bg-indigo-700 btn hover:bg-indigo-800'
           onClick={() => {
             buttonRef.current.alterToggle(); // function from child component
           }}>

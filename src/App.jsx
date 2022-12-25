@@ -30,12 +30,12 @@ function App() {
       {/* <UseRef /> */}
       {/* <UseMemo /> */}
       {/* <UseCallback /> */}
-      <UseLayoutEffect />
-      {/* <UseImperativeHandle /> */}
+      {/* <UseLayoutEffect /> */}
+      <UseImperativeHandle />
       {/* <UseContext /> */}
-      {/* <AdvanceUseReducer /> */}
-      {/* <AdvanceUseEffect /> */}
       {/* <AdvanceUseState /> */}
+      {/* <AdvanceUseEffect /> */}
+      {/* <AdvanceUseReducer /> */}
       {/* <ThemeProvider>
         <FunctionContext />
       </ThemeProvider> */}

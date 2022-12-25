@@ -27,13 +27,19 @@ export default function UseEffect() {
         useEffect
       </h2>
       <div className='mt-3'>
-        <button className='btn' onClick={() => setResourceType('posts')}>
+        <button
+          className='bg-indigo-700 btn hover:bg-indigo-800'
+          onClick={() => setResourceType('posts')}>
           Get Posts
         </button>
-        <button className='btn' onClick={() => setResourceType('users')}>
+        <button
+          className='bg-indigo-700 btn hover:bg-indigo-800'
+          onClick={() => setResourceType('users')}>
           Get Users
         </button>
-        <button className='btn' onClick={() => setResourceType('comments')}>
+        <button
+          className='bg-indigo-700 btn hover:bg-indigo-800'
+          onClick={() => setResourceType('comments')}>
           Get Comments
         </button>
       </div>

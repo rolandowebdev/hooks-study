@@ -1,11 +1,13 @@
-import { useState, createContext, useContext } from 'react';
+import { createContext, useContext } from 'react';
+import useLocalStorage from '../CustomHooks/useLocalStorage';
 
 // TODO: step 1 create context
 const ThemeContext = createContext();
 const ThemeUpdateContext = createContext();
 
 const ThemeProvider = ({ children }) => {
-  const [darkTheme, setDarkTheme] = useState(true);
+  // * use custom hooks useLocalStorage for store data into local storage
+  const [darkTheme, setDarkTheme] = useLocalStorage('theme', false);
 
   const toggleTheme = () => setDarkTheme((prevDarkTheme) => !prevDarkTheme);
 

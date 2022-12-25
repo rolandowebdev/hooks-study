@@ -24,7 +24,7 @@ const UseLayoutEffect = () => {
     <>
       <button
         ref={button}
-        className='mt-4 btn'
+        className='mt-4 bg-indigo-700 btn hover:bg-indigo-800'
         onClick={() => setShow((prevState) => !prevState)}>
         Click
       </button>

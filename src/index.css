@@ -15,6 +15,6 @@
 
 @layer utilities {
   .btn {
-    @apply w-full p-4 mb-3 text-2xl font-semibold transition-colors duration-200 bg-indigo-600 rounded-sm hover:bg-indigo-800;
+    @apply w-full p-4 mb-3 text-2xl font-semibold transition-colors duration-200 rounded-sm;
   }
 }
